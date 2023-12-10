@@ -2,13 +2,15 @@ package main
 
 import "fmt"
 
-func main() {
-	var elemanBir int = 1
-	var elemanIki int = 2
-	var elemanKayit int = 0
-	var toplam int = 2
-	toplamAnlik := 0
+var (
+	elemanBir   int = 1
+	elemanIki   int = 2
+	elemanKayit int = 0
+	toplam      int = 2
+	toplamAnlik int = 0
+)
 
+func main() {
 	for elemanIki < 4000000 {
 
 		toplamAnlik = elemanBir + elemanIki
@@ -20,7 +22,6 @@ func main() {
 		elemanKayit = elemanIki
 		elemanIki += elemanBir
 		elemanBir = elemanKayit
-
 	}
 
 	fmt.Println(toplam)
